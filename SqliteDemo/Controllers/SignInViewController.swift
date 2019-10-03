@@ -9,7 +9,9 @@
 import UIKit
 
 class SignInViewController: UIViewController {
-
+    @IBOutlet weak var txtEmailIdName: UITextField!
+    @IBOutlet weak var txtPasswordName: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

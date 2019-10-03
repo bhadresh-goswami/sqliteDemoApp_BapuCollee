@@ -9,7 +9,10 @@
 import UIKit
 
 class ResetViewController: UIViewController {
-
+    @IBOutlet weak var txtEmailIdName: UITextField!
+    @IBOutlet weak var txtPasswordName: UITextField!
+    @IBOutlet weak var txtConfirmPasswordName: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

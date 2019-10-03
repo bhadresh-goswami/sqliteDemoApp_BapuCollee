@@ -15,6 +15,11 @@
 		D77336F22345E14F00F5DB30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D77336F02345E14F00F5DB30 /* LaunchScreen.storyboard */; };
 		D77336FD2345E14F00F5DB30 /* SqliteDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77336FC2345E14F00F5DB30 /* SqliteDemoTests.swift */; };
 		D77337082345E14F00F5DB30 /* SqliteDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77337072345E14F00F5DB30 /* SqliteDemoUITests.swift */; };
+		D77337172345E68900F5DB30 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77337162345E68900F5DB30 /* SignUpViewController.swift */; };
+		D77337192345E6A600F5DB30 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77337182345E6A600F5DB30 /* SignInViewController.swift */; };
+		D773371B2345E6AE00F5DB30 /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D773371A2345E6AE00F5DB30 /* ResetViewController.swift */; };
+		D773371E2345E8A900F5DB30 /* dbUser.sql in Resources */ = {isa = PBXBuildFile; fileRef = D773371D2345E8A900F5DB30 /* dbUser.sql */; };
+		D77337212345ED6C00F5DB30 /* DatabaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77337202345ED6C00F5DB30 /* DatabaseOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		D77337032345E14F00F5DB30 /* SqliteDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SqliteDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D77337072345E14F00F5DB30 /* SqliteDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqliteDemoUITests.swift; sourceTree = "<group>"; };
 		D77337092345E14F00F5DB30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D77337162345E68900F5DB30 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D77337182345E6A600F5DB30 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		D773371A2345E6AE00F5DB30 /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
+		D773371D2345E8A900F5DB30 /* dbUser.sql */ = {isa = PBXFileReference; lastKnownFileType = file; name = dbUser.sql; path = SqliteDemo/db/dbUser.sql; sourceTree = SOURCE_ROOT; };
+		D77337202345ED6C00F5DB30 /* DatabaseOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,9 @@
 		D77336E32345E14E00F5DB30 /* SqliteDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D773371F2345ED4E00F5DB30 /* databaseHelper */,
+				D773371C2345E86C00F5DB30 /* db */,
+				D77337152345E67200F5DB30 /* Controllers */,
 				D77336E42345E14F00F5DB30 /* AppDelegate.swift */,
 				D77336E62345E14F00F5DB30 /* ViewController.swift */,
 				D77336E82345E14F00F5DB30 /* Main.storyboard */,
@@ -126,6 +139,33 @@
 				D77337092345E14F00F5DB30 /* Info.plist */,
 			);
 			path = SqliteDemoUITests;
+			sourceTree = "<group>";
+		};
+		D77337152345E67200F5DB30 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D77337162345E68900F5DB30 /* SignUpViewController.swift */,
+				D77337182345E6A600F5DB30 /* SignInViewController.swift */,
+				D773371A2345E6AE00F5DB30 /* ResetViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D773371C2345E86C00F5DB30 /* db */ = {
+			isa = PBXGroup;
+			children = (
+				D773371D2345E8A900F5DB30 /* dbUser.sql */,
+			);
+			name = db;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		D773371F2345ED4E00F5DB30 /* databaseHelper */ = {
+			isa = PBXGroup;
+			children = (
+				D77337202345ED6C00F5DB30 /* DatabaseOperation.swift */,
+			);
+			path = databaseHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D77336F22345E14F00F5DB30 /* LaunchScreen.storyboard in Resources */,
+				D773371E2345E8A900F5DB30 /* dbUser.sql in Resources */,
 				D77336EF2345E14F00F5DB30 /* Assets.xcassets in Resources */,
 				D77336EA2345E14F00F5DB30 /* Main.storyboard in Resources */,
 			);
@@ -264,6 +305,10 @@
 			files = (
 				D77336E72345E14F00F5DB30 /* ViewController.swift in Sources */,
 				D77336E52345E14F00F5DB30 /* AppDelegate.swift in Sources */,
+				D77337172345E68900F5DB30 /* SignUpViewController.swift in Sources */,
+				D77337192345E6A600F5DB30 /* SignInViewController.swift in Sources */,
+				D773371B2345E6AE00F5DB30 /* ResetViewController.swift in Sources */,
+				D77337212345ED6C00F5DB30 /* DatabaseOperation.swift in Sources */,
 				D77336ED2345E14F00F5DB30 /* SqliteDemo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

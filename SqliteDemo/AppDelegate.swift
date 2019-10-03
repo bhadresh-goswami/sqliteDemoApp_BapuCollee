@@ -14,9 +14,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var dbPath = ""
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //step1
+        //i need a path of document folder
+        let docPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        print(docPath)
+        
+        //step 2
+        //create new path with file name
+        self.dbPath = docPath + "/dbUser.sql"
+        
+        //step 3
+        if(FileManager.default.fileExists(atPath: self.dbPath))
+        {
+            //yes file is exist and don't need to copy it
+        }
+        else{
+            //need to copy
+            //step 4
+            let bundlePath = Bundle.main.path(forResource: "dbUser", ofType: "sql")
+            
+            do{
+           
+                try FileManager.default.copyItem(atPath: bundlePath!, toPath: self.dbPath)
+        
+            }
+            catch(let err as NSError)
+            {
+                print(err.localizedDescription)
+            }
+        
+        
+        }
+        
         return true
     }
 
